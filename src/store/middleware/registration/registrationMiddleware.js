@@ -1,18 +1,19 @@
 const registrationMiddleware = (store) => (next) => (action) => {
   if (action.type === "user/register") {
-    const existingUser = store
-      .getState()
-      .user.users.find((u) => u.email === action.payload.email);
+    const { email } = action.payload;
+    const users = store.getState().user.users;
+
+    const existingUser = users.find((u) => u.email === email);
 
     if (existingUser) {
-      alert("Такой пользователь уже есть!");
+      alert("Такой пользователь уже существет! попробуйте другой логин.");
       return;
-    } else {
-      alert("Регистрация прошла успешно");
     }
+
+    alert("Вы Зарегестрировались!!!");
   }
 
   return next(action);
 };
 
-export default registrationMiddleware;
+export default registrationMiddleware;;

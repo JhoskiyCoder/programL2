@@ -1,9 +1,27 @@
 import React from "react";
 
-function Footer(){
-    return(
-        <footer style={{background:'#333', color:"#fff", padding: '15px', textAlign: "center"}}>
-            2025 MyApp IT-122 Все права защищеныю
+function Footer() {
+    const footerStyle = {
+        background: "#1f1f1f",
+        color: "#fff",
+        padding: "20px 15px",
+        textAlign: "center",
+        fontSize: "14px",
+        boxShadow: "0 -2px 6px rgba(0,0,0,0.2)",
+        marginTop: "auto",
+    };
+
+    const highlightStyle = {
+        color: "#4CAF50",
+        fontWeight: "600",
+    };
+
+    return (
+        <footer style={footerStyle}>
+            <div>
+                &copy; 2025 <span style={highlightStyle}>MyApp</span> IT-122
+            </div>
+            <div>Все права защищены</div>
         </footer>
     );
 }
