@@ -38,6 +38,7 @@ function Slider() {
             setFade(true);
         }, 500);
     };
+    // функция, которая валидирует email
 
     return (
         <div style={{ textAlign: 'center', margin: '20px' }}>
@@ -52,6 +53,7 @@ function Slider() {
                     position: 'relative',
                     maxWidth: '800px',
                     height: '500px'
+                        // что это?
                 }}
             />
             <div>
