@@ -10,11 +10,13 @@ import FavoritesPage from "./pages/FavoritePage";
 import RegistrationPage from "./pages/RegistrationPage";
 import Login from "./pages/Login";
 import Users from "./pages/Users";
+import Notification from "./components/Notification";
 
 function App() {
   return (
     <Router>
       <Header />
+        <Notification />
       <Routes>
         <Route path="/movies/:id" element={<Detail />} />
         <Route
