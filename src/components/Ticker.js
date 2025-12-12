@@ -3,13 +3,15 @@ import React from "react";
 function Ticker(){
     return(
         <div style={{
+            background: '#ffffff',
             overflow: 'hidden',
-            whiteSpace: 'nowrap',
-            background: '#222',
-            color : '#0f0',
-            padding: '10px'
+            nowrap: 'nowrap',
+            color : '#0a0a0a',
+            padding: '10px',
+            width: '100%',
+
         }}>
-            <marquee>Добро пожаловать на сайт IT-122</marquee>
+            <marquee>Кимпинтяоо</marquee>
         </div>
     )
 }

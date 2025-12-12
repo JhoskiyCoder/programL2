@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeBooking } from "../store/slices/bookingSlice";
-// Не забудьте проверить путь к showNotification!
 import { showNotification } from "../store/slices/notificationSlice";
 
 export default function BookingList() {
@@ -11,12 +10,12 @@ export default function BookingList() {
     const [search, setSearch] = useState("");
     const [sort, setSort] = useState("");
 
-    // 🔎 ФИЛЬТР ПО ИМЕНИ
+
     const filtered = bookings.filter(b =>
         b.name.toLowerCase().includes(search.toLowerCase())
     );
 
-    // 🔽 СОРТИРОВКА
+
     const sorted = [...filtered].sort((a, b) => {
         switch (sort) {
             case "date":

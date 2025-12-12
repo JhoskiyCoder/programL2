@@ -22,7 +22,7 @@ function Detail() {
                 <b>ID фильма:</b> {movie.id}
             </p>
 
-            {/* 👇 ВСТАВКА ФОРМЫ БРОНИРОВАНИЯ */}
+
             <BookingForm movieId={movie.id} movieTitle={movie.title} />
         </div>
     );
